@@ -4,18 +4,45 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FAEBD7"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/txtTitulo"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_margin="10dp"
-        android:background="#FFEB3B"
-        android:text="Google ML Kit"
+        android:background="#30B507"
+        android:text="APLICACIÓN \n DE FACULTADES"
         android:textAlignment="center"
-        android:textSize="20sp"
-        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="normal|bold"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="10dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logouteq"
+        app:layout_constraintBottom_toTopOf="@+id/btGallery"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logouteq"
+        app:layout_constraintBottom_toTopOf="@+id/btGallery"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
@@ -23,6 +50,7 @@
         android:layout_width="0dp"
         android:layout_height="55dp"
         android:layout_margin="5dp"
+        android:drawableLeft="@android:drawable/ic_menu_gallery"
         android:onClick="abrirGaleria"
         android:text="Galería"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -31,34 +59,37 @@
 
     <Button
         android:id="@+id/btCamera"
-        android:layout_margin="5dp"
         android:layout_width="0dp"
         android:layout_height="55dp"
+        android:layout_margin="5dp"
+        android:drawableLeft="@android:drawable/ic_menu_camera"
         android:onClick="abrirCamara"
         android:text="Cámara"
-        app:layout_constraintTop_toBottomOf="@+id/txtTitulo"
         app:layout_constraintLeft_toRightOf="@+id/btGallery"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
 
     <FrameLayout
         android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="@android:color/black"
         android:layout_margin="10dp"
+        android:background="@android:color/holo_green_light"
         app:layout_constraintBottom_toTopOf="@+id/txtresults"
-        app:layout_constraintTop_toBottomOf="@+id/btGallery">
-    </FrameLayout>
+        app:layout_constraintTop_toBottomOf="@+id/btGallery"
+        tools:layout_editor_absoluteX="10dp"></FrameLayout>
 
 
     <TextView
         android:id="@+id/txtresults"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="50dp"
         android:layout_margin="10dp"
+        android:drawableLeft="@android:drawable/ic_menu_send"
         android:inputType="textMultiLine"
         android:scrollbars="vertical"
         android:text="Resultados:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         app:layout_constraintBottom_toTopOf="@id/btObject"
         tools:layout_editor_absoluteX="10dp" />
 
@@ -67,6 +98,7 @@
         android:layout_width="0dp"
         android:layout_height="55dp"
         android:layout_margin="10dp"
+        android:drawableLeft="@android:drawable/ic_menu_info_details"
         android:onClick="OCRfx"
         android:text="OCR"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -78,9 +110,10 @@
         android:layout_width="150dp"
         android:layout_height="55dp"
         android:layout_margin="10dp"
+        android:drawableLeft="@android:drawable/sym_contact_card"
         android:onClick="Objectofx"
-        android:text="Objetos"
 
+        android:text="Objetos"
         app:layout_constraintBottom_toTopOf="@id/btText"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
@@ -90,6 +123,7 @@
         android:layout_width="0dp"
         android:layout_height="55dp"
         android:layout_margin="10dp"
+        android:drawableLeft="@android:drawable/ic_menu_search"
         android:onClick="Rostrosfx"
         android:text="Rostros"
         app:layout_constraintBottom_toBottomOf="parent"
